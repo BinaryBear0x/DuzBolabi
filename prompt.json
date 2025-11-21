@@ -1,0 +1,180 @@
+{
+    "task": "FULL UI/UX FIX & REDESIGN",
+    "goal": "Aşağıda detaylı şekilde listelenmiş olan tüm tasarım, yerleşim, renk, spacing, shadow, overflow ve component görünüm sorunlarını çöz. Uygulamanın tüm sayfalarında tutarlı, modern, pastel, ferah bir tasarım oluştur. Tüm düzeltmeler Flutter Material 3 tasarım prensiplerine uygun olacak. Belirtilen renk paleti dışında hiçbir renk kullanılmayacak. Tüm layout ve component boyutları standardize edilecek.",
+  
+    "strict_color_palette": {
+      "light": {
+        "primary": "#4BCB8B",
+        "onPrimary": "#FFFFFF",
+        "secondary": "#FFCA6C",
+        "onSecondary": "#2C2C2C",
+        "background": "#F6F7F8",
+        "surface": "#FFFFFF",
+        "surfaceVariant": "#ECEDEE",
+        "onSurface": "#1F2022",
+        "tertiary": "#6AB8FF",
+        "error": "#FF6B6B",
+        "outline": "#D4D6D8",
+        "shadow": "rgba(0,0,0,0.08)"
+      },
+      "dark": {
+        "primary": "#5FE3A1",
+        "onPrimary": "#0E0F0F",
+        "secondary": "#FFD68A",
+        "onSecondary": "#1B1B1B",
+        "background": "#101113",
+        "surface": "#1A1B1D",
+        "surfaceVariant": "#2B2D30",
+        "onSurface": "#FFFFFF",
+        "tertiary": "#79C3FF",
+        "error": "#FF7B7B",
+        "outline": "#3C3F45",
+        "shadow": "rgba(0,0,0,0.50)"
+      }
+    },
+  
+    "design_tokens": {
+      "border_radius": {
+        "card": 24,
+        "button": 18,
+        "input": 18,
+        "chip": 14
+      },
+      "spacing": {
+        "top": 24,
+        "horizontal": 20,
+        "component": 20,
+        "between_sections": 28
+      },
+      "shadows": {
+        "soft": "0 4 12 rgba(0,0,0,0.06)",
+        "medium": "0 6 18 rgba(0,0,0,0.10)"
+      },
+      "icon_sizes": {
+        "category_icon": 24,
+        "product_icon": 24,
+        "large_icon": 72
+      }
+    },
+  
+    "fixes": {
+      "global_layout": [
+        "Tüm sayfalara top padding 24px ekle.",
+        "Tüm horizontal padding 20px olacak.",
+        "Componentler arasındaki dikey boşluk 20-28px arası sabitlenecek.",
+        "SafeArea doğru şekilde uygulanacak."
+      ],
+  
+      "overflow_fix": [
+        "Anasayfadaki arama ve filtre butonun olduğu satırı yeniden düzenle.",
+        "Arama kutusu Expanded olacak.",
+        "FilterButton genişliği 90-110px arası olmalı.",
+        "ROW içinde overflow ihtimali tamamen kaldırılacak."
+      ],
+  
+      "kategori_duzeltme": [
+        "Ürün ekleme sayfasındaki kategori seçimi artık KAYDIRMALI OLMAYACAK.",
+        "Tüm kategoriler aynı anda görünecek şekilde 2 satırlı veya 3 lü grid yapısı kurulacak.",
+        "Her kategori butonu aynı boyutta olacak.",
+        "Active kategori → primary tonunda outline + background."
+      ],
+  
+      "button_fixes": [
+        "Kaydet butonu aktif olduğunda kesinlikle primary renk (#4BCB8B) olacak.",
+        "Pasif buton → primary %20 opacity + text primary.",
+        "Tükettim ve Çöpe Gitti butonları pasif görünümden çıkarılacak.",
+        "Tükettim: mint-outline + mint-icon + mint-text olacak.",
+        "Çöpe Gitti: error-outline + error-icon + error-text olacak.",
+        "Tüm buton radius = 18 px."
+      ],
+  
+      "card_and_surface_fixes": [
+        "Tüm kartlarda radius 24 px olacak.",
+        "Shadow tüm kartlarda soft shadow olacak.",
+        "Kart içi padding 16-20 px arası sabitlenecek.",
+        "Input alanları surfaceVariant (#ECEDEE) olacak."
+      ],
+  
+      "urun_ekleme_sayfasi": [
+        "Kaydet butonu aktif görünmeli.",
+        "Sayfa genel olarak çok yukarıda; spacing düzelt.",
+        "Kategori kutusu genişletilip nefes alacak şekilde düzenlenmeli.",
+        "Icon header alanı 72px’e indirilmeli."
+      ],
+  
+      "urun_detay_sayfasi": [
+        "Tükettim ve Çöpe Gitti butonları disabled gibi durmamalı.",
+        "icon container çok büyük → 72px yapılacak.",
+        "Kart gölgeleri yumuşatılacak.",
+        "Ürün bilgisi ve grafik arasında fazla boşluk varsa azaltılacak."
+      ],
+  
+      "buzdolabi_sayfasi": [
+        "Bu sayfa tamamen yeniden tasarlanacak.",
+        "Raf kartları tek tip layout olacak.",
+        "Border: primary %20 opacity (#4BCB8B33).",
+        "Raf yüksekliği 120px olacak.",
+        "Raf içi spacing düzenlenecek.",
+        "İkonlar 56px container içinde ortalanmış olacak.",
+        "Ortadaki buzdolabı görseli yüksek çözünürlükle değiştirilecek.",
+        "Ürün ikonları scale edilmiş olacak (24px).",
+        "Text alignment düzeltilecek."
+      ],
+  
+      "tema_sayfasi": [
+        "Çöp kutusu kartı diğer kartlara göre çok büyük → küçült.",
+        "Icon container boyutu 48px ile sabitlenecek.",
+        "Kart yükseklikleri tüm sayfada aynı olacak."
+      ],
+  
+      "raporlar_sayfasi": [
+        "Pie chart çok büyük → 240px yerine 160px yap.",
+        "Tüm kartlar tek ekrana sığacak şekilde küçültülecek.",
+        "Kart height: 120px → 88px yapılacak.",
+        "Shadow ve spacing tutarlı hale getirilecek."
+      ],
+  
+      "anasayfa": [
+        "Yaklaşan uyarısı tasarımı düzenlenecek.",
+        "Background: #FFECEC",
+        "Radius 18px",
+        "Badge 24px circle olacak.",
+        "Ürün kartlarının spacing’i azaltılacak.",
+        "Ürün kartı height 118px olacak."
+      ],
+  
+      "alt_navigation": [
+        "Active icon: primary (#4BCB8B)",
+        "Inactive icons: #BFC3C7",
+        "Icon boyutları standardize edilecek."
+      ],
+  
+      "iconography": [
+        "Tüm kategori ikonları 24px olacak.",
+        "Ürün ikonları 24px olacak.",
+        "High-resolution asset kullan."
+      ],
+  
+      "typography": [
+        "Font: Inter",
+        "Title L: 26/w700",
+        "Title M: 22/w700",
+        "Body: 15/w500",
+        "Caption: 13/w400"
+      ]
+    },
+  
+    "output_files": [
+      "theme/theme.dart",
+      "components/buttons.dart",
+      "components/cards.dart",
+      "components/inputs.dart",
+      "screens/urun_ekleme/*",
+      "screens/urun_detay/*",
+      "screens/buzdolabi/*",
+      "screens/anasayfa/*",
+      "screens/raporlar/*",
+      "screens/tema/*"
+    ]
+  }
+  

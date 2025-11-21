@@ -1,0 +1,61 @@
+name: gida_koruyucu
+description: Gıda Koruyucu - STT Takip ve Oyunlaştırma uygulaması
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  
+  # State Management
+  flutter_riverpod: ^3.0.3
+  
+  # Routing
+  go_router: ^14.6.2
+  
+  # Local Database
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.1.5
+  
+  # Notifications
+  flutter_local_notifications: ^17.1.2
+
+  timezone: ^0.9.4
+  
+  # Charts
+  fl_chart: ^0.69.2
+  
+  # Animations
+  lottie: ^3.1.3
+  
+  # Utilities
+  uuid: ^4.5.1
+  intl: ^0.20.2
+  
+  # Google Fonts
+  google_fonts: ^6.1.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.13
+
+flutter:
+  uses-material-design: true
+  
+  assets:
+    - assets/icons/
+    - assets/animations/
+    - assets/illustrations/
+    - assets/fridge/
+    - assets/stickers/
+    - assets/skins/
+

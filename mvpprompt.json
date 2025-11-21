@@ -1,0 +1,82 @@
+{
+    "project": "Gıda Koruyucu",
+    "goal": "Mevcut Flutter uygulamasının UI/UX kalitesini profesyonel seviyeye çıkarmak, buzdolabı ekranını oyun grafiklerine benzer şekilde tamamen yeniden tasarlamak, tüm ekranlarda modern mobil tasarım prensiplerini uygulamak, küçük animasyonlar eklemek ve dark mode ile responsive destek eklemek.",
+    
+    "tasks": {
+      "ui_overhaul": {
+        "description": "Tüm arayüzü modernize et. Duolingo/Notion/FoodNoms tarzı temiz, rahat nefes alan bir UI oluştur.",
+        "requirements": [
+          "Material 3 theme + Custom Google Font (Inter veya Nunito)",
+          "Spacing, padding, margin standartlaşsın",
+          "Card radius 20–26px",
+          "Soft shadow sistemi",
+          "Dark mode tam destek",
+          "1.2x–1.3x daha büyük font hiyerarşisi"
+        ]
+      },
+      
+      "fridge_redesign": {
+        "description": "Buzdolabı ekranını tamamen yeniden yap. Oyun ekranı gibi olmalı.",
+        "requirements": [
+          "Ekran full-page bir 3D/flat-buton stilli buzdolabı illüstrasyonu",
+          "4 raf olacak (üst-orta-orta-alt)",
+          "Her raf için geniş grid alanı",
+          "Skin’ler arka plana uygulanır (blue, retro, gray, default)",
+          "Sticker’lar dolabın içine yerleştirilebilir (UI etkileşimli)",
+          "Ürünler sürükle-bırak ile raflara taşınabilir (Draggable + DragTarget)",
+          "Hover highlight (parlak çerçeve animasyonu)",
+          "Ürün eklenince bounce animation",
+          "Dolap açılışında short scale-in animasyonu"
+        ]
+      },
+  
+      "animations": {
+        "description": "Her etkileşimde micro-interaction ekle.",
+        "requirements": [
+          "Button press → 90ms scale down + 120ms easeOut",
+          "Sayfa geçişleri → 150ms custom fade-slide",
+          "Lottie: success, error, empty state",
+          "Skeleton loader: ürün listesi ve rapor",
+          "Pull-to-refresh animation"
+        ]
+      },
+  
+      "responsive": {
+        "description": "Tüm ekranlar responsive olacak.",
+        "requirements": [
+          "MediaQuery + LayoutBuilder kullanımı",
+          "Tablet layout grid sistemi",
+          "Dynamic text scale support"
+        ]
+      },
+  
+      "accessibility": {
+        "description": "A11y standartlarını uygula.",
+        "requirements": [
+          "Semantics widget",
+          "Tooltip yorumlaması",
+          "Color contrast kontrolü"
+        ]
+      }
+    },
+  
+    "output_expectations": {
+      "deliverables": [
+        "Yeni buzdolabı UI implementasyonu",
+        "Yeni skin/sticker entegrasyonu",
+        "4 raflı interaktif dolap yapısı",
+        "Tüm UI ekranları revamp",
+        "Dark mode",
+        "Lottie animasyonları",
+        "Skeleton loaders",
+        "Modern Google Font teması"
+      ],
+      "technical_constraints": [
+        "Flutter 3.10+",
+        "Riverpod 3.0",
+        "go_router",
+        "Hive"
+      ]
+    }
+  }
+  
