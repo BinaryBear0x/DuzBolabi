@@ -1,37 +1,27 @@
-# Gıda Koruyucu - STT Takip ve Oyunlaştırma
+# DuzBolabi
 
-Flutter ile geliştirilmiş, gıda ürünlerinin son tüketim tarihlerini takip eden ve oyunlaştırma özellikleri sunan mobil uygulama.
+Gıda ürünlerinin son tüketim tarihini takip etmeye odaklanan, oyunlaştırma unsurları içeren bir Flutter mobil uygulamasıdır.
 
-## Kurulum
+## Ne Yapar
 
-1. Flutter SDK'nın kurulu olduğundan emin olun:
-   ```bash
-   flutter --version
-   flutter doctor
-   ```
+- ürünlerin son tüketim tarihini takip eder
+- yerel veri saklama ile çevrimdışı çalışabilir
+- bildirim, istatistik ve oyunlaştırma bileşenleri içerir
 
-2. Bağımlılıkları yükleyin:
-   ```bash
-   flutter pub get
-   ```
+## Teknolojiler
 
-3. Hive adapterlerini oluşturun:
-   ```bash
-   flutter pub run build_runner build
-   ```
+- Flutter
+- Dart
+- Riverpod
+- Hive
+- go_router
+- flutter_local_notifications
 
-4. Uygulamayı çalıştırın:
-   ```bash
-   flutter run
-   ```
+## Çalıştırma
 
-## Teknoloji Stack
-
-- **Framework**: Flutter
-- **State Management**: Riverpod
-- **Routing**: go_router
-- **Local Database**: Hive
-- **Notifications**: flutter_local_notifications + timezone
-- **Charts**: fl_chart
-- **Animations**: Lottie
+```bash
+flutter pub get
+flutter pub run build_runner build
+flutter run
+```
 
